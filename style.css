@@ -1,0 +1,215 @@
+/* Importa uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+/* Inter é a fonte usada por empresas como GitHub e Linear */
+
+/* === RESET E BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Garante que padding não aumenta o tamanho dos elementos */
+}
+
+body {
+  background-color: #0d1117;
+  /* Cor de fundo — esse tom é o mesmo do GitHub dark */
+  color: #e6edf3;
+  /* Cor do texto padrão */
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* Centraliza tudo horizontalmente */
+  padding: 40px 20px;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container {
+  width: 100%;
+  max-width: 680px;
+  /* Limita a largura pra não ficar esticado em telas grandes */
+  display: flex;
+  flex-direction: column;
+  /* Empilha os blocos um embaixo do outro */
+  gap: 48px;
+  /* Espaço entre cada seção */
+}
+
+/* === CABEÇALHO === */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tag {
+  display: inline-block;
+  /* Faz o elemento ter largura do conteúdo, não da linha toda */
+  background: rgba(35, 197, 94, 0.15);
+  /* Verde bem transparente */
+  color: #23c55e;
+  border: 1px solid rgba(35, 197, 94, 0.3);
+  padding: 4px 14px;
+  border-radius: 999px;
+  /* Deixa bem arredondado — formato "pílula" */
+  font-size: 13px;
+  width: fit-content;
+  /* Largura só do conteúdo */
+  animation: pulsar 2s infinite;
+  /* Chama a animação que definimos abaixo */
+}
+
+/* Animação de pulsar na tag verde */
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+  /* A tag fica piscando levemente — chama atenção */
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 span {
+  /* Colore só o sobrenome */
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  /* Gradiente roxo/lilás */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Esses dois juntos fazem o gradiente aparecer no texto */
+  background-clip: text;
+}
+
+.cargo {
+  color: #7d8590;
+  /* Cinza mais suave pra ser subtítulo */
+  font-size: 16px;
+}
+
+.bio {
+  color: #adbac7;
+  font-size: 16px;
+  line-height: 1.7;
+  /* Espaçamento entre linhas — mais fácil de ler */
+  max-width: 520px;
+}
+
+/* === TÍTULOS DE SEÇÃO === */
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #e6edf3;
+}
+
+/* === SKILLS === */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 colunas de tamanho igual */
+  gap: 12px;
+}
+
+.skill-card {
+  background: #161b22;
+  /* Fundo levemente diferente do body — cria profundidade */
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+  transition: transform 0.2s, border-color 0.2s;
+  /* Animação suave ao passar o mouse */
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  /* Sobe 4px ao passar o mouse — efeito de "levantar" */
+  border-color: #6366f1;
+  /* Borda roxa aparece no hover */
+}
+
+.skill-card i {
+  font-size: 32px;
+  /* Tamanho do ícone */
+}
+
+/* Cores específicas de cada ícone */
+.fa-python { color: #3572A5; }
+.fa-js { color: #f7df1e; }
+.fa-code { color: #a855f7; }
+.fa-html5 { color: #e34f26; }
+.fa-css3-alt { color: #264de4; }
+.fa-git-alt { color: #f05032; }
+
+.skill-card span {
+  font-size: 13px;
+  color: #7d8590;
+}
+
+/* === FRASE === */
+.frase {
+  border-left: 3px solid #6366f1;
+  /* Linha roxa na esquerda — estilo de citação */
+  padding-left: 20px;
+}
+
+blockquote {
+  color: #adbac7;
+  font-size: 16px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* === LINKS === */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.link-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  /* Remove o sublinhado padrão dos links */
+  color: #e6edf3;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  border-color: #6366f1;
+}
+
+.link-card i {
+  font-size: 28px;
+}
+
+.fa-github { color: #e6edf3; }
+.fa-linkedin { color: #0a66c2; }
+.fa-envelope { color: #6366f1; }
+
+.link-card span {
+  font-size: 13px;
+  color: #7d8590;
+}
+
+/* === RESPONSIVO (funciona no celular) === */
+@media (max-width: 480px) {
+  /* Essas regras só valem em telas menores que 480px */
+  h1 { font-size: 36px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .links-grid { grid-template-columns: repeat(2, 1fr); }
+}

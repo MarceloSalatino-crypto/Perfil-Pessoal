@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Permite acentos e caracteres especiais -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Faz a página funcionar bem no celular -->
+  
+  <title>Marcelo Salatino | Dev</title>
+  <!-- Nome que aparece na aba do navegador -->
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Conecta o CSS nessa página -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Biblioteca de ícones gratuita (GitHub, LinkedIn, etc) -->
+  <!-- Usamos ela pra não precisar desenhar ícones na mão -->
+</head>
+
+<body>
+
+  <div class="container">
+  <!-- Caixa central que agrupa tudo -->
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header>
+      <div class="tag">Disponível para estágio 🚀</div>
+      <!-- Pequena tag verde no topo — chama atenção do recrutador -->
+
+      <h1>Marcelo <span>Salatino</span></h1>
+      <!-- span em volta de "Salatino" pra colorir diferente no CSS -->
+
+      <p class="cargo">Engenharia de Software · Dev em formação</p>
+      <!-- Subtítulo com sua área -->
+
+      <p class="bio">
+        Estudante apaixonado por programação, focado em Python,
+        JavaScript e TypeScript. Construindo projetos práticos
+        pra crescer como desenvolvedor.
+      </p>
+      <!-- Parágrafo curto sobre você — aparece logo de cara -->
+    </header>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills">
+      <h2>🛠️ Tecnologias</h2>
+      <!-- section agrupa um bloco de conteúdo com tema próprio -->
+
+      <div class="skills-grid">
+      <!-- div pra organizar as skills em grade -->
+
+        <div class="skill-card">
+          <i class="fab fa-python"></i>
+          <!-- ícone do Python vindo da biblioteca Font Awesome -->
+          <span>Python</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill-card">
+          <!-- TypeScript não tem ícone próprio no Font Awesome
+               então usamos um ícone genérico de código -->
+          <i class="fas fa-code"></i>
+          <span>TypeScript</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+
+        <div class="skill-card">
+          <i class="fab fa-git-alt"></i>
+          <span>Git</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FRASE ===== -->
+    <section class="frase">
+      <blockquote>
+        "Todo expert já foi iniciante.
+        Estou construindo minha jornada um commit de cada vez."
+      </blockquote>
+      <!-- blockquote é a tag correta pra citações -->
+    </section>
+
+    <!-- ===== LINKS ===== -->
+    <section class="links">
+      <h2>📬 Onde me encontrar</h2>
+
+      <div class="links-grid">
+
+        <a href="https://github.com/MarceloSalatino-crypto" target="_blank" class="link-card">
+          <!-- target="_blank" abre em nova aba -->
+          <!-- href é o endereço do link -->
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/marcelo-galimberti-salatino-347862359/" target="_blank" class="link-card">
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="mailto:marcelogsalatino5@gmail.com" class="link-card">
+          <!-- mailto: abre o app de email ao clicar -->
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Conecta o JavaScript — sempre no final do body
+       pra garantir que o HTML já carregou antes do JS rodar -->
+
+</body>
+</html>
